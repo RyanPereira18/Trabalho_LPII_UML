@@ -1,0 +1,16 @@
+@startuml
+abstract class lojadedepartamentos.Pessoa
+class java.util.Objects
+class java.util.Scanner
+class lojadedepartamentos.Cliente
+class lojadedepartamentos.Estoque
+class lojadedepartamentos.Fornecedor
+class lojadedepartamentos.Funcionario
+class lojadedepartamentos.LojaDeDepartamentosTeste
+class lojadedepartamentos.Produto
+class lojadedepartamentos.Venda
+lojadedepartamentos.Cliente --|> lojadedepartamentos.Pessoa
+lojadedepartamentos.Fornecedor ..> java.util.Objects
+lojadedepartamentos.Funcionario --|> lojadedepartamentos.Pessoa
+lojadedepartamentos.LojaDeDepartamentosTeste ..> java.util.Scanner
+@enduml

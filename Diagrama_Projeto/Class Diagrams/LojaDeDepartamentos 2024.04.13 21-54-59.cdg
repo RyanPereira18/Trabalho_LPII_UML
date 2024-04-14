@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="LojaDeDepartamentos">
+  <ClassDiagramComponents>
+    <Interface name="Bonificavel" package="lojadedepartamentos" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Methods>
+        <Method name="bonifica" returnType="void" visibility="package">
+          <Argument type="double" name="aumento"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="Cliente" package="lojadedepartamentos" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private" isStatic="true"/>
+        <Field name="codCliente" type="int" visibility="private"/>
+        <Field name="dataNascimento" type="String" visibility="private"/>
+        <Field name="telefone" type="String" visibility="private"/>
+        <Field name="endereco" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="dataNascimento"/>
+          <Argument type="String" name="telefone"/>
+          <Argument type="String" name="endereco"/>
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="cpf"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDataNascimento" returnType="String" visibility="public"/>
+        <Method name="setDataNascimento" returnType="void" visibility="public">
+          <Argument type="String" name="dataNascimento"/>
+        </Method>
+        <Method name="getTelefone" returnType="String" visibility="public"/>
+        <Method name="setTelefone" returnType="void" visibility="public">
+          <Argument type="String" name="telefone"/>
+        </Method>
+        <Method name="getEndereco" returnType="String" visibility="public"/>
+        <Method name="setEndereco" returnType="void" visibility="public">
+          <Argument type="String" name="endereco"/>
+        </Method>
+        <Method name="getCodCliente" returnType="Integer" visibility="public"/>
+        <Method name="setCodCliente" returnType="void" visibility="public">
+          <Argument type="Integer" name="codCliente"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Estoque" package="lojadedepartamentos" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private" isStatic="true"/>
+        <Field name="codEstoque" type="int" visibility="private"/>
+        <Field name="produtoEmEstoque" type="String" visibility="private"/>
+        <Field name="quantidade" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="produtoEmEstoque"/>
+          <Argument type="double" name="quantidade"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getQuantidade" returnType="double" visibility="public"/>
+        <Method name="setQuantidade" returnType="void" visibility="public">
+          <Argument type="double" name="quantidade"/>
+        </Method>
+        <Method name="getCodEstoque" returnType="Integer" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Fornecedor" package="lojadedepartamentos" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="cnpj" type="String" visibility="private"/>
+        <Field name="endereco" type="String" visibility="private"/>
+        <Field name="telefone" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="cnpj"/>
+          <Argument type="String" name="endereco"/>
+          <Argument type="String" name="telefone"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getCnpj" returnType="String" visibility="public"/>
+        <Method name="setCnpj" returnType="void" visibility="public">
+          <Argument type="String" name="cnpj"/>
+        </Method>
+        <Method name="getEndereco" returnType="String" visibility="public"/>
+        <Method name="setEndereco" returnType="void" visibility="public">
+          <Argument type="String" name="endereco"/>
+        </Method>
+        <Method name="getTelefone" returnType="String" visibility="public"/>
+        <Method name="setTelefone" returnType="void" visibility="public">
+          <Argument type="String" name="telefone"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Funcionario" package="lojadedepartamentos" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private" isStatic="true"/>
+        <Field name="codFuncionario" type="int" visibility="private"/>
+        <Field name="dataAdmissao" type="String" visibility="private"/>
+        <Field name="cargo" type="String" visibility="private"/>
+        <Field name="salario" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="cpf"/>
+          <Argument type="String" name="dataAdmissao"/>
+          <Argument type="String" name="cargo"/>
+          <Argument type="double" name="salario"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodFuncionario" returnType="int" visibility="public"/>
+        <Method name="getDataAdmissao" returnType="String" visibility="public"/>
+        <Method name="setDataAdmissao" returnType="void" visibility="public">
+          <Argument type="String" name="dataAdmissao"/>
+        </Method>
+        <Method name="getCargo" returnType="String" visibility="public"/>
+        <Method name="setCargo" returnType="void" visibility="public">
+          <Argument type="String" name="cargo"/>
+        </Method>
+        <Method name="getSalario" returnType="double" visibility="public"/>
+        <Method name="setSalario" returnType="void" visibility="public">
+          <Argument type="double" name="salario"/>
+        </Method>
+        <Method name="bonifica" returnType="void" visibility="public">
+          <Argument type="double" name="aumento"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LojaDeDepartamentosTeste" package="lojadedepartamentos" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Pessoa" package="lojadedepartamentos" visibility="public" isAbstract="true" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="cpf" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="cpf"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getCpf" returnType="String" visibility="public"/>
+        <Method name="setCpf" returnType="void" visibility="public">
+          <Argument type="String" name="cpf"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PrecoInvalidoException" package="lojadedepartamentos" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="message"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Produto" package="lojadedepartamentos" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private" isStatic="true"/>
+        <Field name="codProduto" type="int" visibility="private"/>
+        <Field name="descricao" type="String" visibility="private"/>
+        <Field name="precoVenda" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="descricao"/>
+          <Argument type="double" name="precoVenda"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDescricao" returnType="String" visibility="public"/>
+        <Method name="setDescricao" returnType="void" visibility="public">
+          <Argument type="String" name="descricao"/>
+        </Method>
+        <Method name="getPrecoVenda" returnType="double" visibility="public"/>
+        <Method name="setPrecoVenda" returnType="void" visibility="public">
+          <Argument type="double" name="precoVenda"/>
+        </Method>
+        <Method name="getCodProduto" returnType="Integer" visibility="public"/>
+        <Method name="setCodProduto" returnType="void" visibility="public">
+          <Argument type="Integer" name="codProduto"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Venda" package="lojadedepartamentos" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private" isStatic="true"/>
+        <Field name="codVenda" type="int" visibility="private"/>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+        <Field name="funcionario" type="Funcionario" visibility="private"/>
+        <Field name="valorTotalVenda" type="double" visibility="private"/>
+        <Field name="dataVenda" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codVenda"/>
+          <Argument type="Cliente" name="cliente"/>
+          <Argument type="Funcionario" name="funcionario"/>
+          <Argument type="double" name="valorTotalVenda"/>
+          <Argument type="String" name="dataVenda"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodVenda" returnType="int" visibility="public"/>
+        <Method name="getCliente" returnType="Cliente" visibility="public"/>
+        <Method name="setCliente" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="getFuncionario" returnType="Funcionario" visibility="public"/>
+        <Method name="setFuncionario" returnType="void" visibility="public">
+          <Argument type="Funcionario" name="funcionario"/>
+        </Method>
+        <Method name="getValorTotalVenda" returnType="double" visibility="public"/>
+        <Method name="setValorTotalVenda" returnType="void" visibility="public">
+          <Argument type="double" name="valorTotalVenda"/>
+        </Method>
+        <Method name="getDataVenda" returnType="String" visibility="public"/>
+        <Method name="setDataVenda" returnType="void" visibility="public">
+          <Argument type="String" name="dataVenda"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="lojadedepartamentos.Venda" target="lojadedepartamentos.Produto"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="lojadedepartamentos.Funcionario" target="lojadedepartamentos.Bonificavel"/>
+    <UseRelation source="lojadedepartamentos.Venda" target="lojadedepartamentos.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="lojadedepartamentos.Cliente" target="lojadedepartamentos.Pessoa"/>
+    <HasRelation name="funcionario" source="lojadedepartamentos.Venda" target="lojadedepartamentos.Funcionario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="lojadedepartamentos.Venda" target="lojadedepartamentos.Funcionario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="lojadedepartamentos.Estoque" target="lojadedepartamentos.Fornecedor"/>
+    <HasRelation name="cliente" source="lojadedepartamentos.Venda" target="lojadedepartamentos.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="lojadedepartamentos.Funcionario" target="lojadedepartamentos.Pessoa"/>
+    <IsRelation name="is" source="lojadedepartamentos.Produto" target="lojadedepartamentos.Estoque"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
